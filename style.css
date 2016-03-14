@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+body {
+	background-color: #ededef;
+	font-family: 'Source Sans Pro', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+
+	/**'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;**/
+
+}
+
+a{text-decoration:none;}
+
+p{
+	color:white;
+	position: relative;
+    padding-top: 350px;
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+h6{
+	font-size: 20px;
+	padding-top: 25px;
+	color: #616161;
+	text-align: center;
+}
+
+span{
+	font-size: 25px;
+	color: #808080;
+}
+
+/**导航栏固定**/
+.header{
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+    height: 54px;
+    line-height: 54px;
+    text-shadow: 0 1px 0 #FFF;
+    border-bottom: 1px solid #DEDDDF;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04),inset 0 1px 0 #FFF;
+    background-color: #fbfcfd;
+ 	text-align: center;
+ 	border-radius:0px;} 
+
+li{
+ 	float:left;
+ 	position:absolute;
+ 	list-style-type:none;
+ 	line-height: 54px;
+ 	width: 100%;
+ 	text-align: center;
+	}
+
+li.paper{
+		text-align: left;
+		padding-left: 25px;
+        }
+
+li.centerword{
+       }
+li.rightback{
+		position: relative;
+		margin-left: -120px;
+		text-align: right;
+		padding-top: 4px;
+
+        }
+
+ /**整体DIV**/
+div{
+	height: 400px;
+	margin: 0 auto;
+	width: 720px;
+	box-shadow: 3px 3px 3px #aaaaaa;
+	border-radius:5px;
+}
+
+.title{
+	height: 70px;
+	margin: 0 auto;
+	width: 720px;
+	box-shadow: 3px 3px 3px #aaaaaa;
+	border-radius:5px;
+	background-color: white;
+}
+
+
+.fifa{
+	background-repeat:no-repeat;
+	background-image: url(image/back1.jpg);
+	background-position:0px 0px;
+}
+
+.mh370{
+	background-repeat:no-repeat;
+	background-image: url(image/mh370.jpg);
+	background-position:0px 0px;
+}
+
+.diaobao{background-image: url(image/back2.jpg);
+
+}
+
+.shortvideo{background-image: url(image/back3.jpg);
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+
+}
+
+.bigvideo{
+	height: 450px;
+	margin: 0 auto;
+	width: 800px;
+	box-shadow: 3px 3px 3px #aaaaaa;
+	border-radius:5px;
+
+}
+
+.peichangtuan{;
+	background-position:0px -407px;
+	background-repeat:no-repeat;}
+
+.wobuxiangchongmo{;
+	background-position:0px 0px;
+	background-repeat:no-repeat;}
+
+.dream{;
+	background-position:0px 0px;
+	background-repeat:no-repeat;}
+
+
+/*鼠标悬停改变图片*/
+.fifa:hover
+{
+background-position:0px -407px;
+}
+
+.mh370:hover
+{
+background-position:0px -415px;
+}
+
+
+.diaobao:hover
+{
+}
+
+/**.shortvideo:hover
+{
+	background-position:0px -407px;
+}**/
+
+.peichangtuan:hover
+{
+	background-position:0px 0px;
+}
+
+.dream:hover
+{
+	background-position:0px -407px;
+}
+
+.wobuxiangchongmo:hover
+{
+	background-position:0px -407px;
+}
+
+.title a{
+	margin:0.25rem;
+    padding:.25rem;
+    color:#999;
+    border-radius:.25rem;
+    background:#eee;
+}
+
+.title a:hover{
+	background:#BBB;
+	color: white;
+}
