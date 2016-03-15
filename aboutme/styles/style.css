@@ -1,0 +1,262 @@
+/* CSS Document
+
+  green     #1ccba9
+  white     #ffffff
+  blue      #3498db
+  dark blue #34495e
+  type1     #3a3a3a
+  type2     #ffffff
+
+
+ */
+
+ /* ---------------
+ 	Generl styles
+	--------------- */
+
+
+
+html{
+	-webkit-font-smoothing:antialiased;
+	text-rendering: optimizelegibility;
+
+}
+
+
+
+body{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif
+	width:1366px;
+}
+
+ /* ---------------
+ 	type style
+	--------------- */
+/*a.color1:link{color: #FFFFFF ; text-decoration:none;} /*常规时候的样式*/
+/*a.color1:visited{color: #FFFFFF; text-decoration:none;} /*鼠标指上去的样式*/
+/*a.color1:hover {color: #FFFFFF; text-decoration:underline;} /*访问过后的样式*/
+a:link{color:#FFFFFF/*颜色自定义*/} /* 未访问的链接 */
+a:visited{color:#FFFFFF/*颜色自定义*/} /* 已访问的链接 */
+a:hover{color:#FFFFFF/*颜色自定义*/}/* 鼠标在链接上 */
+a:active{color:#FFFFFF/*颜色自定义*/}/* 点击激活链接 */
+
+a.color1:link{color:#494949; text-decoration:none;/*颜色自定义*/} /* 未访问的链接 */
+a.color1:visited{color:#494949; text-decoration:none;/*颜色自定义*/}
+a.color1:hover{color:#494949; text-decoration:none;/*颜色自定义*/}
+a.color1:active{color:#494949; text-decoration:none;/*颜色自定义*/}
+
+h1, h2, h3, h4, h5, p1 {
+	margin:0;
+	line-height:100%;
+}
+
+h1{
+	font-size:65px;
+	font-family:'Segoe UI';
+	font-weight:100;
+	color:#494949;
+}
+
+dot{
+	border-bottom:2px dotted #ddd;
+}
+
+h2{
+	font-size:65px;
+	padding-top:77px;
+	font-family:'Segoe UI';
+	padding-left:107px;
+	font-weight:100;
+	color:#494949;
+
+}
+
+p {
+	font-size:20px;
+	line-height:100%;
+	padding-left:107px;
+	padding-right:176px;
+	font-family:'Segoe UI';
+	color:#494949;
+	font-weight:normal;
+	line-height:1.6;
+
+}
+
+h3{
+	font-size:16px;
+}
+
+h4{
+	font-size:20px;
+	color:#494949;
+	padding-left:107px;
+	font-family:'Segoe UI';
+	font-weight:500;
+}
+
+h5{
+	font-size:65px;
+	color:#FFFFFF;
+	padding-left:107px;
+	font-family:'Segoe UI';
+    padding-top:77px;
+	font-weight:100;
+}
+
+h7 {
+	font-size:25px;
+	color:#FFFFFF;
+	padding-left:0px;
+	font-weight:100;
+  font-family:'Segoe UI';
+
+
+}
+
+p1{
+	font-size:20px;
+	line-height:100%;
+	padding-left:107px;
+	color:#FFFFFF;
+	font-family:'Segoe UI';
+	font-weight:normal;
+}
+
+p2{
+	font-size:20px;
+	line-height:150%;
+	padding-left:107px;
+	color:#FFFFFF;
+	font-family:'Segoe UI';
+	font-weight:normal;
+}
+
+/* ---------------
+ 	layout
+	--------------- */
+body{
+	 width:100%; min-width:1366px;
+	 border:0 auto;
+	 margin:0;
+
+}
+
+header{
+	background:#ddecdf;
+	width:1366px;
+}
+
+
+.container{
+
+
+}
+
+.containerbig{
+	/*--background:#FF0C10;*/
+	width:1366px;
+	margin: 0 auto;
+
+	}
+#myphoto-title{
+	float:right;
+	padding-top:170px;
+	padding-right:400px;
+
+}
+
+#myphoto-image{
+	float:left;
+	padding-left:300px;
+	padding-top:70px;
+	margin-bottom:0px;
+	}
+
+#freetitle{
+	float:left;
+	padding-top:83px;
+}
+
+#freetitle2{
+	float:left;
+}
+
+#freetitle3{
+	padding-top:160px;
+	padding-right:0px;
+
+}
+
+#social{
+	float:right;
+
+
+
+}
+
+#freeimage{
+	float:right;
+	padding-right:146px;
+	padding-top:66px;
+}
+
+#introduce{
+	background:#3498db;
+	}
+
+#show{
+	text-align:center;
+}
+
+#show1, show2, show3, show4{
+	padding-right:68px;
+	float:left;
+
+}
+
+#manyitems{
+	height:329px;
+	padding-left:74px;
+	padding-bottom:106px;
+}
+
+#manyitems2{
+	marging-right:0;
+	padding-left:20px;
+
+}
+
+#mtstyle{
+	float:left;
+	width:299px;
+	text-align:center;
+
+
+}
+
+
+#social{
+	padding-right:200px;
+
+}
+footer{
+	background:#34495e
+}
+
+
+/* ---------------
+ 	global style
+	--------------- */
+
+.clearfix:before,
+.clearfix:after{
+	content: '';
+	display: table;
+}
+.clearfix:after {
+	clear:both;
+}
+.clearfix {
+    zoom; 1; /*for ie6/ie7*/
+}

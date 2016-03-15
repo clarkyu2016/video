@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:doc="http://xsltsl.org/xsl/documentation/1.0" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head><!-- INSERT BY TRANSFORMER. SELECTOR=head,LOCATION=prepend --><script>(function(){function E(a,b){!1==p(a,this,function(c,d){f[f.length]={type:'insert',newNode:a,before:b,me:d,config:c};a.setAttribute('data-yo-src',a.getAttribute('data-yo-src'))})?this.yo_ib(a,b):domCompleteTriggered&&q(f.length-1)}function F(a){!1==p(a,this,function(b,c){f[f.length]={type:'append',newNode:a,before:c,me:c,config:b};a.getAttribute&&a.setAttribute('data-yo-src',a.getAttribute('data-yo-src'))})?this.yo_ac(a):domCompleteTriggered&&q(f.length-1)}function G(a){k(Object.defineProperty)&&k(a.src)&& Object.defineProperty(a,'src',{get:function(){return a.getAttribute('data-yo-src')},set:function(b){a.setAttribute('src',b)}});a.yo_gAttr=k(a.yo_gAttr)?a.yo_gAttr:a.getAttribute;a.getAttribute=function(a){return this.yo_gAttr('src'==a?'data-yo-src':a)}}function H(a){k(Object.defineProperty)&&k(a.innerHTML)&&(a.yo_innerHTML=k(a.yo_innerHTML)?a.yo_innerHTML:a.innerHTML,Object.defineProperty(a,'innerHTML',{get:function(){l('innerHTML - get - '+a.id?a.id:a.className+a.yo_innerHTML);return a.yo_innerHTML}, set:function(b){l('innerHTML - get - '+a.id?a.id:a.className+', '+b);!1==p(a,a,function(a,d){f[f.length]={type:'inner',newNode:b,before:d,me:d,config:a}})?u(a,b):domCompleteTriggered&&q(f.length-1)}}))}function p(a,b,c){var d=a.nodeName.toLowerCase(),h=null,e=!1;if('script'==d||'iframe'==d){if(h=C(a),null!=h&&k(h.onLoad)&&!k(b.onLoad)&&n(a,'load',h.onLoad),null==h||'none'!=h.delayType)c(h,b),e=!0}else if(h=C(b),null==h||'none'!=h.delayType)c(h,b),h.before=b,e=!0;l(a.nodeName+' '+a.src+' is '+(e?'': 'NOT')+' delayed loaded');!1==e&&null!=h&&k(h.onBefore)&&(l(a.nodeName+' onBefore '+a.src),h.onBefore());return e}function v(a){a&&(a.yo_ac=k(a.yo_ac)?a.yo_ac:a.appendChild,a.yo_ib=k(a.yo_ib)?a.yo_ib:a.insertBefore,a.appendChild=F,a.insertBefore=E)}function C(a){var b=a.src;if(null==b||0==b.length)return{delayType:'none'};for(var c=0;c<e.resources.length;c++)if(-1!=b.indexOf(e.resources[c].url))return l('Found configuration for '+b+' delayType '+e.resources[c].delayType),'empty'==e.resources[c].delayType&& (a.src=null==e.resources[c].delaySrc?'data:text/javascript;plain,//':e.resources[c].delaySrc,e.resources[c].delayType='none'),e.resources[c];l('Did NOT find configuration for '+b+' checking local configuration. ');return null!=a.delayType?('empty'==a.delayType&&(a.src=null==a.delaySrc?'data:text/javascript;plain,//':a.delaySrc,a.delayType='none'),{delayType:a.delayType,delayTime:a.delayValue,delayEvent:a.delayValue,delayPosition:a.delayValue}):{delayType:e.defaultType,delayTime:e.defaultDelay}}function l(a){e.log&& k(console)&&k(console.log)&&console.log('yo_AfterShocK: '+a)}function k(a){return'undefined'!==typeof a}function w(a,b,c){c=c.currentTarget;if(-1===r(c,_targets)){var d=c.getAttribute('data-yo-src'),e=c.getAttribute('data-yo-delayType'),g=c.getAttribute('data-yo-delayValue');f[f.length]={type:b,newNode:a,before:c,me:c.parentNode,config:{delayType:e,delayTime:g,delayPosition:g,delayEvent:g}};_targets[_targets.length]=c;s(c,'load');s(c,'error');l(c.nodeName+'Loader( '+d+', 0, '+e+', '+g+')')}}function n(a, b,c){a.attachEvent?a.attachEvent&&a.attachEvent('on'+b,c):a.addEventListener(b,c,!1)}function s(a,b,c){a.detachEvent?a.detachEvent&&a.detachEvent('on'+b,c):a.removeEventListener(b,c,!1)}function x(a){if(k(f[a])){var b=f[a].me,c=f[a].newNode,d=f[a].type,e=f[a].before,g=f[a].config;g.delayType='none';l('Injecting '+c.src+', by '+d+' into the DOM now.');k(g.onBefore)&&(l('Executing onBefore '),g.onBefore());'insert'==d?b.yo_ib(c,e):'append'==d?b.yo_ac(c):'replace'==d?b.replaceChild(c,e):'src'==d?e.src= c.getAttribute('data-yo-src'):'style'==d?c.style['background-image']='url('+c.getAttribute('data-yo-src')+')':'inner'==d?'replace'==f[a].how?u(e,c):t(e,c,f[a].how):'xhr'==d&&xhr_send.apply(f[a].xhr,f[a].xhr._yo.send_args[0])}}function y(a){for(a=0;a<f.length;a++)if(z(f[a],'lazy')){var b=f[a].config.delayPosition;if('string'===typeof b)b=D(b);else if(null==b||k(b))b=f[a].before;if(null!=b){l('Found Lazy '+b+', '+b+' because it is visible');var c=a;winH=m.innerHeight||g.documentElement.clientHeight|| g.body.clientHeight;if(!('getBoundingClientRect'in g.documentElement)||I(g.documentElement,b)&&b.getBoundingClientRect().top<winH+offset)l('showIfVisible is visible '+c+', '+b),x(c)}}}function q(a){var b=f[a];if(z(b,'defer')){var c=null!=b.config?b.config.delayTime:e.defaultDelay;l('Loading '+b.newNode.src+' via timer event. It will load in '+c);setTimeout('yo_afterShock('+a+');',c)}else z(b,'lazy')&&yo_displayNow()}function J(){e.write&&(e.write.filters||e.write.delayers)&&!k(g.yo_write)&&(g.yo_write= g.write,g.write=function(a){if(e.write.filters)for(var b=0;b<e.write.filters.length;b++)a=a.replace(e.writeFilters[b],'');if(e.write.delayers){for(var c=!1,b=0;b<e.write.delayers.length;b++){var d=e.write.delayers[b];if(a.match(d.start)||1==d.state)if(c=!0,d.string?d.string+=a:(d.state=1,d.string=a),!k(d.end)||a.match(d.end))k(d.delayType)&&'none'!=d.delayType?(f[f.length]={type:'inner',how:d.how,newNode:a,before:g.getElementById(d.selector),me:g.getElementById(d.selector),config:d},domCompleteTriggered&& q(f.length-1)):t(g.getElementById(d.selector),d.string,d.how),d.state=2,d.string=''}!1==c&&g.yo_write(a)}else g.yo_write(a);l('write hander = '+a)})}function r(a,b,c){var d;if(b){if(Array.prototype.indexOf)return Array.prototype.indexOf.call(b,a,c);d=b.length;for(c=c?0>c?Math.max(0,d+c):c:0;c<d;c++)if(c in b&&b[c]===a)return c}return-1}function u(a,b){for(;a.firstChild;)a.removeChild(a.firstChild);t(a,b)}function t(a,b,c){var d=g.createElement('div');d.innerHTML='string'===typeof b?b:b.innerHTML; for(b=d.childNodes;0<b.length;)'insert'==c?a.parentNode.insertBefore(d.removeChild(b[0]),a):a.appendChild(d.removeChild(b[0]));return this}function D(a){return k($)&&!0==e.jquery?$(a)[0]:g.getElementById(a)}function K(a,b,c,d){n(a,b[0],function(a){l('Loading '+f[c].before.src+' via event handler '+d.delayEvent);x(c);s(a.currentTarget,b[0],p)})}function A(){if(e.scan)for(var a=0,b=e.scan.length;a<b;a++){var c=e.scan[a],d=g.getElementsByTagName(c),f=void 0;l('Find all '+c+' tags in the document.'); for(var k=0,L=d.length;k<L;k+=1){var f=d[k],m=f.getAttribute('data-yo-src');m?(l('Found a '+c+', src = '+m+' tag to handle with AfterShocK.'),w(f,f.src?'src':'style',{currentTarget:f}),G(f)):'script'==c&&'yo/sequence'==f.getAttribute('type')&&(l('Found a '+c+', yo/sequence tag to handle with AfterShocK.'),yo_sequenceContent(f))}y();setTimeout(B,25)}}function z(a,b){return null!=a&&null!=a.config&&a.config.delayType==b}var g=document,m=window,f=[],e={defaultDelay:5E3,defaultType:'none',fixLinks:{oldHost:'', newHost:''},log:!0,throttle:20,jquery:!1,sequenceXHR:!1,scan:['img'],resources:[],write:{}};_targets=[];winH=1E3;offset=100;var B=function(a,b){var c=0;return function(){var d=+new Date;d-c<b||(c=d,a.apply(this,arguments))}}(y,20);domCompleteTriggered=!1;xhr_open=XMLHttpRequest.prototype.open;xhr_send=XMLHttpRequest.prototype.send;var I=g.documentElement.compareDocumentPosition?function(a,b){return!!(a.compareDocumentPosition(b)&16)}:g.documentElement.contains?function(a,b){return a!==b&&(a.contains? a.contains(b):!1)}:function(a,b){for(;b=b.parentNode;)if(b===a)return!0;return!1};n(m,'scroll',B);n(m,'resize',B);n(m,'load',function(){domCompleteTriggered=!0;for(var a=0;a<f.length;a++)q(a)});v(g.getElementsByTagName('script')[0].parentNode);(function(a){function b(c){if('readystatechange'!==c.type||'complete'===g.readyState)if(s('load'===c.type?m:g,c.type,b),!d){d=!0;a();yo_displayNow();for(c=0;c<f.length;c++){var h=f[c].config;if(h&&'event'==h.delayType){l('Event handling '+f[c].before.src+' '+ h.delayEvent);var n=h.delayEvent.split(' ');K(D(n[1]),n,c,h)}}if(k(e.fixLinks)&&null!=e.fixLinks){h=g.getElementsByTagName('a');for(c=0;c<h.length;c++)n=h[c].href,-1!=n.indexOf(e.fixLinks.oldHost)&&(h[c].href=n.replace(e.fixLinks.oldHost,e.fixLinks.newHost));h=g.getElementsByTagName('form');for(c=0;c<h.length;c++)n=h[c].action,-1!=n.indexOf(e.fixLinks.oldHost)&&(h[c].action=n.replace(e.fixLinks.oldHost,e.fixLinks.newHost))}}}function c(){try{g.documentElement.doScroll('left')}catch(a){setTimeout(c, 50);return}b('poll')}var d=!1,h=!0;if('complete'===g.readyState)a();else{if(g.createEventObject&&g.documentElement.doScroll){try{h=!m.frameElement}catch(p){}h&&c()}n(g,'DOMContentLoaded',b);n(g,'readystatechange',b);n(m,'load',b)}})(A);m.yo_afterShock=x;m.yo_configureAfterShock=function(a){for(var b in a)e[b]=a[b];J();!0==e.sequenceXHR&&(XMLHttpRequest.prototype.open=xhrOpen,XMLHttpRequest.prototype.send=xhrSend)};m.yo_nodeWatch=v;m.yo_nodeClearWatch=function(a){k(a.yo_ib)&&(me.insertBefore=me.yo_ib); k(a.yo_ac)&&(me.appendChild=me.yo_ac)};m.yo_imageLoader=function(a){w(a.currentTarget,'src',a)};m.yo_frameLoader=function(a,b,c,d){w(event.currentTarget,'src',event)};m.yo_scanTags=A;m.yo_displayNow=function(){l('Handle the display of all visible tags up to now.');A();y({})};m.yo_sequenceContent=function(a){if(-1===r(a,_targets)){a='string'===typeof a?g.getElementById(a):a;var b=g.getElementById(a.getAttribute('data-yo-location')),c=a.getAttribute('data-yo-how'),d=a.getAttribute('data-yo-delayType'), e=a.getAttribute('data-yo-delayValue');null==b&&(b=a,c='insert');if(null==d||'none'==d)null==c||'replace'==c?u(b,a.innerHTML):t(b,a.innerHTML,c);else{if(-1!==r(a,_targets))return;l('Sequence a script = '+a.id+', type '+d);f[f.length]={type:'inner',how:c,newNode:a,before:b,me:a,config:{delayType:d,delayTime:e,delayPosition:e,delayEvent:e}}}_targets[_targets.length]=a}};m.yo_sequenceDom=function(a){if(-1===r(a,_targets)){a='string'===typeof a?g.getElementById(a):a;var b=a.getAttribute('data-yo-delayType'), c=a.getAttribute('data-yo-delayValue');a.src=a.id+a.className;e.resources[e.resources.length]={url:a.id+a.className,delayType:b,delayTime:c,delayEvent:c,delayPosition:c};H(a);v(a);_targets[_targets.length]=a}};m.yo_scriptLoader=function(a,b,c,d,f){e.resources[e.resources.length]={url:a,delayType:b,delayTime:c,delayEvent:c,delayPosition:c};b=g.createElement('script');b.type='text/javascript';b.async=!0;k(d)&&(b.onload=d);k(f)&&(b.onerror=f);b.src=a;a=g.getElementsByTagName('script')[0];a.parentNode.insertBefore(b, a)};xhrOpen=function(a,b,c,d,f){this._yo={open_args:arguments,async:!1===c?!1:!0};l('xhr open = '+b+', async '+c);-1!=b.indexOf(e.fixLinks.oldHost)&&(b=b.replace(e.fixLinks.oldHost,e.fixLinks.newHost),l('overriding the old host in XHR open = '+b));return xhr_open.apply(this,arguments)};xhrSend=function(a){if(!0!==this._yo.async)return xhr_send.apply(this,args);var b=this;this._yo.send_args=arguments;node={src:this._yo.open_args[1],nodeName:'xhr'};if(!1==p(node,node,function(a,d){f[f.length]={type:'xhr', xhr:b,newNode:d,config:a}}))return l('xhr send is NOT defered, '+node.src),xhr_send.apply(this,arguments);l('xhr send is defered, '+node.src+', '+f[f.length].config.delayType)}})();</script><script>window.yo_configureAfterShock({fixLinks : null, defaultType : 'none', scan : ['script', 'iframe'], log : true,defaultDelay : 50,resources : [{url:'platform.js', delayType: 'defer', delayTime: '1500'}]});</script><script>yo_configureAfterShock({log:false});</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Chijing Yu</title>
+    <style type="text/css" id="static">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body{line-height:1;background:#fff;text-align:left;font-feature-settings:"liga" 0;-moz-font-feature-settings:"liga" off;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+a img{border:none;}
+ul,li{margin:0 0 0 13px;padding:0;}
+ul li{margin:0 0 0 16px;padding:0 0 0 3px;}
+.clear{clear:both;height:0;}
+br.clear{line-height:0;}
+div.name{font-size:15px;line-height:17px;font-weight:bold;padding:0;text-align:left;text-transform:uppercase;color:#099;}
+div.name span.fName{font-weight:normal;}
+div.logo{display:none;}
+div.paragraph{position:relative;clear:both;}
+div.heading{clear:both;font-weight:bold;text-transform:uppercase;}
+div.address{position:relative;text-align:left;font-size:0.917em;line-height:1.25em;margin-top:0;padding-top:1px;}
+div.address2{position:relative;text-align:left;font-size:0.917em;line-height:1.25em;}
+span.paddedline{display:block;}
+span.jobtitle,span.companyname,span.degree,span.dates_wrapper{font-weight:bold;}
+span.dates_wrapper{display:block;float:left;text-align:left;}
+span.cdesc{font-style:italic;}
+div#document{color:#333;}
+div#document table{width:100%;}
+.table_wrapper{width:100%;margin-top:0;}
+table.twocol td{width:50%;}
+table.skills{width:100%;}
+table.skills th,table.skills td{width:20%;text-align:center;}
+table.skills th{text-decoration:underline;}
+table.skills .skillname,table.skills .skillrating{text-align:left;width:35%;}
+table.skills .skillrating{width:20%;}
+table.skills .skillyears,table.skills .skilllast{width:19%;}
+table.skills .pad1{width:5%;}
+table.skills .pad2,table.skills .pad3{width:1%;}
+.nodisplay{display:none;}
+div.resumeTitle,div.execRsmTitle{font-weight:bold;text-align:left;color:#099;}
+td.twocol_2{border-left:1px solid #fefdfd;}
+div#document div.sectiontitle{color:#099;}
+div#document .sectionCL .paragraph{margin-top:0 !important;}
+</style>
+    <style type="text/css" id="unparsed">
+    div#document {line-height: {$FTLH}px;}
+    div#document table {line-height: {$FTLH}px;}
+    div#document.pagesize {width: {$DOCW}px;}
+    div#document.vmargins {padding-top: {$TBMR}px; padding-bottom: {$TBMR}px;}
+    div#document.hmargins {padding-left: {$LRMR}px; padding-right: {$LRMR}px;}
+    div#document .section {margin-top: {$SCSP}px;}
+    div#document div.firstsection {margin-top: 0;}
+    div#document div.SECTION_CNTC {margin-top: 0;}
+    div#document div.heading {margin-bottom: {$SHMB}px;}
+    div#document div.paragraph {margin-top: {$PSPC}px;}
+    div#document div.firstparagraph {margin-top: 0;}
+    div#document .singlecolumn, div#document .maincolumn {margin-left: {$SCML}px;}
+    span.dates_wrapper {width: {$SCML}px; font-size:{$DTSZ}px; line-height:{$DTLH}px;}
+    .fontsize {font-size: {$FTSZ}px;}
+    .fontface {font-family: {$FTFC};}
+    div#document div.sectiontitle {font-size: {$HDSZ}px; line-height: {$HDLH}px;}
+    div.name {font-size: {$NMSZ}px; line-height: {$NMLH}px;}
+    div#document .thinbottomborder {border-bottom: {$LNWT}px solid #000;}
+    div.address {font-size: {$CISZ}px; line-height: {$CILH}px; margin-top: {$CIMT}px;}
+    div#document table.skills td {padding-top: {$TDMT}px;}
+    div.resumeTitle {font-size: {$RTTL}px; line-height: {$RTLH}px;}
+    div#document div.noPind {margin-left: 0;}
+    div.execRsmTitle {font-size: {$ETTL}px; line-height: {$ETLH}px;}
+    span.compDescWrap {margin-bottom: {$CDES}px;}
+
+    /*FIX for Re-calculating width of singlecolumn for CL*/
+    div#document .sectionCL .singlecolumn {margin-left: 0!important; width: 100%; font-size: {$FTSZ}px;}
+    div.address2 {font-size: {$FTSZ}px; line-height: {$FTLH}px;}
+  </style>
+    <style type="text/css" id="dynamic">
+    div#document {line-height: 13px;}
+    div#document table {line-height: 13px;}
+    div#document.pagesize {width: 532px;}
+    div#document.vmargins {padding-top: 24px; padding-bottom: 24px;}
+    div#document.hmargins {padding-left: 40px; padding-right: 40px;}
+    div#document .section {margin-top: 10px;}
+    div#document div.firstsection {margin-top: 0;}
+    div#document div.SECTION_CNTC {margin-top: 0;}
+    div#document div.heading {margin-bottom: 2px;}
+    div#document div.paragraph {margin-top: 4px;}
+    div#document div.firstparagraph {margin-top: 0;}
+    div#document .singlecolumn, div#document .maincolumn {margin-left: 115px;}
+    span.dates_wrapper {width: 115px; font-size:10px; line-height:14px;}
+    .fontsize {font-size: 10px;}
+    .fontface {font-family: "Times New Roman", Times, serif;}
+    div#document div.sectiontitle {font-size: 12px; line-height: 15px;}
+    div.name {font-size: 35px; line-height: 41px;}
+    div#document .thinbottomborder {border-bottom: 0px solid #000;}
+    div.address {font-size: 9px; line-height: 15px; margin-top: {$CIMT}px;}
+    div#document table.skills td {padding-top: 2px;}
+    div.resumeTitle {font-size: 12px; line-height: 18px;}
+    div#document div.noPind {margin-left: 0;}
+    div.execRsmTitle {font-size: 11px; line-height: 14px;}
+    span.compDescWrap {margin-bottom: 2px;}
+
+    /*FIX for Re-calculating width of singlecolumn for CL*/
+    div#document .sectionCL .singlecolumn {margin-left: 0!important; width: 100%; font-size: 10px;}
+    div.address2 {font-size: 10px; line-height: 13px;}
+  </style>
+  </head>
+  <body>
+    <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+      <div id="SECTION_NAME709332567" class="section firstsection" style="padding-top:0px;">
+        <div id="PARAGRAPH_709332567_1_459460018" class="paragraph PARAGRAPH_NAME firstparagraph" style="padding-top:0px;">
+        <div class="name thinbottomborder">
+          <span class="field fName" id="709332567FNAM1">Chijing</span><span></span> <span class="field" id="709332567LNAM1">Yu</span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_CNTC709332563" class="section SECTION_CNTC" style="padding-top:0px;">
+        <div id="PARAGRAPH_709332563_1_459461168" class="paragraph PARAGRAPH_CNTC firstparagraph" style="padding-top:0px;">
+        <div class="address">
+          <span class="field" id="709332563STRT1">Room 604, No.59, 800  Wenhui Road, Songjiang District</span><span>, </span>
+          <span class="spaced field" id="709332563CITY1">Shanghai</span><span>, </span>
+          <span class="spaced field" id="709332563STAT1"></span>
+          <span class="spaced field" id="709332563ZIPC1">201620</span><span> | </span>          
+          <span class="field" id="709332563HPHN1"></span>          
+          <span>C: </span><span class="field" id="709332563CPHN1">(86)13917680676</span><span> | </span>            
+          <span class="field" id="709332563EMAI1">clarkyu1993@outlook.com</span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_SUMM709332568" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_SUMM709332568" class="sectiontitle">Summary</div>
+      </div>
+        <div id="PARAGRAPH_709332568_1_459462147" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="field singlecolumn noPind" id="709332568FRFM1">having huge interests in marketing and media, with several experience as the intern in companies. Wide range of vision and knowledge structure,
+persuasive and willing to work under high pressure. Good at conducting researches and computer skills, such as Ms Office and Adobe Premiere.</div>
+      </div>
+      </div>
+      <div id="SECTION_HILT709332566" class="section" style="padding-top:5px;">
+        <div class="heading">
+        <div id="SECTNAME_HILT709332566" class="sectiontitle">Highlights</div>
+      </div>
+        <div id="PARAGRAPH_709332566_1_459460696" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="singlecolumn maincolumn">
+          <table class="twocol">
+            <tr>
+              <td class="field twocol_1" id="709332566SKC11"><ul><li>Fluent in <font color="#0000ff" style="color: rgb(0, 0, 255);">English</font></li><li><font color="#0000ff">IELTS 7.0 CET-6 574</font></li></ul></td>
+              <td class="field twocol_2" id="709332566SKC21"><ul><li>MS Office</li><li>Adobe Premiere</li><li>Adobe Photoshop</li></ul></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_ACCM709332780" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_ACCM709332780" class="sectiontitle">Accomplishments</div>
+      </div>
+        <div id="PARAGRAPH_709332780_1_459465472" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="field singlecolumn" id="709332780FRFM1"><div><strong>The first Micro film competition of university students in Shanghai</strong></div><div>The third prize, The Award of Popularity, The future star award.</div><div>My short videos were viewed more than 1,000,000 times online.</div><div> </div><div><strong>“Ce Du” app</strong></div><div>As the team leader, developed an app named” Ce Du”, which provided readers with high-quality articles in different length when they are in toilet. Mainly responsible for building editorial team and operation supporting.</div></div>
+      </div>
+      </div>
+      <div id="SECTION_EXPR709332565" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_EXPR709332565" class="sectiontitle">Experience</div>
+      </div>
+        <div id="PARAGRAPH_709332565_1_459462895" class="paragraph firstparagraph" style="padding-top:0px;">
+        <span class="dates_wrapper">
+          <span class="jobdates" format="%m/%Y" id="709332565JSTD1">07/2015</span>
+          <span> to </span>
+          <span class="jobdates" format="%m/%Y" id="709332565EDDT1">09/2015</span>
+        </span>
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="jobtitle" id="709332565JTIT1">Intern</span>
+          </span>
+          <span class="paddedline">
+            <span class="companyname" id="709332565COMP1">Tencent Technology(Beijing) Company Limited</span><span> - </span>
+            <span class="joblocation jobcity" id="709332565JCIT1">Beijing</span>
+            <span class="joblocation jobstate" id="709332565JSTA1"></span>
+          </span>
+          <span class="paddedline">
+            <span class="jobline" id="709332565JDES1"><div><span>Contributed to selecting and editing daily news and supported a new program. </span></div><div><span>Made a documentary about MH370 with colleagues.</span></div></span>
+          </span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_709332565_2_459463086" class="paragraph" style="padding-top:0px;">
+        <span class="dates_wrapper">
+          <span class="jobdates" format="%m/%Y" id="709332565JSTD2">08/2014</span>
+          <span> to </span>
+          <span class="jobdates" format="%m/%Y" id="709332565EDDT2">05/2015</span>
+        </span>
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="jobtitle" id="709332565JTIT2">Operation Intern</span>
+          </span>
+          <span class="paddedline">
+            <span class="companyname" id="709332565COMP2">Dada cultural communication co., ltd., Shanghai</span><span> - </span>
+            <span class="joblocation jobcity" id="709332565JCIT2">Shanghai</span>
+            <span class="joblocation jobstate" id="709332565JSTA2"></span>
+          </span>
+          <span class="paddedline">
+            <span class="jobline" id="709332565JDES2"><div>Took responsibility for the video clip. </div><div>Gave operational support to company's  main product and conducted marketing research.</div></span>
+          </span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_709332565_3_459463291" class="paragraph" style="padding-top:0px;">
+        <span class="dates_wrapper">
+          <span class="jobdates" format="%m/%Y" id="709332565JSTD3">07/2013</span>
+          <span> to </span>
+          <span class="jobdates" format="%m/%Y" id="709332565EDDT3">07/2013</span>
+        </span>
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="jobtitle" id="709332565JTIT3">Business Intern</span>
+          </span>
+          <span class="paddedline">
+            <span class="companyname" id="709332565COMP3">AXA Financial, Inc., Hong Kong</span><span> - </span>
+            <span class="joblocation jobcity" id="709332565JCIT3">Hongkong</span>
+            <span class="joblocation jobstate" id="709332565JSTA3"></span>
+          </span>
+          <span class="paddedline">
+            <span class="jobline" id="709332565JDES3"><div>Runner up in The International Business Plan Competition. </div><div>Focused on analysis of market conditions, collected information through multi-channels, organized and analyzed collected data, successfully gave speeches to the management</div></span>
+          </span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_EDUC709332564" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_EDUC709332564" class="sectiontitle">Education</div>
+      </div>
+        <div id="PARAGRAPH_709332564_1_459464187" class="paragraph firstparagraph" style="padding-top:0px;">
+        <span class="dates_wrapper">
+          <span class="jobdates" id="709332564GRYR1">2016</span>
+        </span>
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="709332564DGRE1"></span>
+            <span class="programline" id="709332564STUY1">International Business</span>
+          </span>
+          <span class="paddedline">
+            <span class="companyname companyname_educ" dependency="SCHO" id="709332564SCHO1">Shanghai University of International Business and Economics</span>
+            <span class="statesWrapper"> - </span>
+            <span class="joblocation jobcity" id="709332564SCIT1">Shanghai</span>
+            <span class="joblocation jobstate" id="709332564SSTA1"></span>
+            <span class="joblocation jobstate" id="709332564SCNT1">China</span>
+          </span>
+          
+          <span class="paddedline">
+            <span class="field" id="709332564FRFM1"><div><span><font color="#000" style="color: rgb(0, 0, 0);">3.2/4.0</font> GPA (Top 5%)</span></div><div><span>Second grade scholarship(2015), Third grade scholarship(2013,2014)</span></div><div><span><span>Member of <font color="#000" style="color: rgb(0, 0, 0);">Enactus</font> Club (Elite Student award in 2014)</span></span></div></span>
+          </span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_709332564_2_459464692" class="paragraph" style="padding-top:0px;">
+        <span class="dates_wrapper">
+          <span class="jobdates" id="709332564GRYR2">2013</span>
+        </span>
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="709332564DGRE2"></span>
+            <span class="programline" id="709332564STUY2">Exchange student</span>
+          </span>
+          <span class="paddedline">
+            <span class="companyname companyname_educ" dependency="SCHO" id="709332564SCHO2">Centre of Asian Studies, University of Hong Kong</span>
+            <span class="statesWrapper"> - </span>
+            <span class="joblocation jobcity" id="709332564SCIT2">Hongkong</span>
+            <span class="joblocation jobstate" id="709332564SSTA2"></span>
+            <span class="joblocation jobstate" id="709332564SCNT2">China</span>
+          </span>
+          
+          <span class="paddedline">
+            <span class="field" id="709332564FRFM2">Representative Courses: Leadership in the
+Knowledge Economy, Marketing Research and Strategy, Studies on International
+Business Strategic Planning</span>
+          </span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
