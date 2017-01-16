@@ -3,4 +3,4 @@ A part of my blog.
 
 http://www.wcbro.com/video/
 
-All the file is in the gh-pages
+All the file are in the gh-pages
